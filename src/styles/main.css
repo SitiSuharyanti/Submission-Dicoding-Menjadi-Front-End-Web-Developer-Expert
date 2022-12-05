@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation */
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: #c1121f;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  padding: 8px 11px;
+  cursor: pointer;
+  color: white;
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 30px;
+  user-select: none;
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 3px;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 60px;
+  left: -600px;
+  width: 100%;
+  transition: all 0.3s;
+  padding: 8px 30px;
+  background-color: #c1121f;
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
+.app-bar .app-bar__navigation ul li {
+  list-style: none;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 15px 0;
+  margin-bottom: 5px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.app-bar .app-bar__navigation ul li a:hover {
+  color: #ffba08;
+}
+
+.skip-link {
+  position: absolute;
+  top: 120px;
+  left: -600px;
+  background-color: #c1121f;
+  color: white;
+  padding: 15px;
+  z-index: 100;
+  font-size: 17px;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+main {
+  position: relative;
+}
+
+/* Hero */
+
+.hero {
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 85vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../public/images/heros/hero-image_2-large.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.isi-hero {
+  position: relative;
+  top: 50%;
+  transform: translateY(-55%);
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 3px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 35px;
+  text-align: center;
+  margin: 5px 0 15px 0;
+}
+
+.hero button {
+  width: 150px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #ffba08;
+  letter-spacing: 1px;
+}
+
+.hero button a {
+  text-decoration: none;
+  color: white;
+  padding: 15px 0;
+}
+
+/* Content - Fitur */
+
+#content #explore {
+  margin: 80px 0;
+}
+
+/* Content Tambahan */
+
+.center-content h4 {
+  font-size: 35px;
+  text-align: center;
+  line-height: 50px;
+  padding: 0 100px;
+  font-family: 'Fredoka One', cursive;
+}
+
+.center-content {
+  background-color: #ffa490;
+  padding: 60px 250px;
+  color: white;
+}
+
+.center-content p {
+  text-align: center;
+  line-height: 30px;
+}
+
+/* Explore Restaurants */
+
+#explore h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 3px;
+}
+
+.restaurant {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 0 auto;
+}
+
+.restaurant .card-body h3 a {
+  padding: 14px 0;
+}
+
+.restaurant .card {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.card-head img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px 30px;
+}
+
+.rating-location {
+  display: flex;
+  color: #ffba08;
+}
+
+.rating-location p {
+  padding-left: 8px;
+  color: #b0b0b0;
+}
+
+.rating,
+.location {
+  display: flex;
+  flex: 1;
+}
+
+.card-body h3 {
+  margin: 15px 0;
+}
+
+.card-body .isi {
+  line-height: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.card-body a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Skeleton */
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+  user-select: none;
+  color: transparent;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+/* Detail Restaurant */
+
+.detail-restaurant {
+  padding: 80px 150px;
+}
+
+.detail-restaurant img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+  margin: 30px 0;
+}
+
+.detail-restaurant h2 {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Fredoka One', cursive;
+}
+
+.detail-restaurant h4 {
+  font-size: 18px;
+}
+
+.detail-restaurant p,
+.menu ol {
+  line-height: 30px;
+  margin: 10px 0;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.menu ol {
+  padding-left: 20px;
+}
+
+.container-review {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 30px;
+}
+
+.card-review {
+  padding: 25px 20px 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  flex-basis: 30%;
+}
+
+.card-review p {
+  line-height: 20px;
+}
+
+.tanggal-review {
+  color: #b0b0b0;
+}
+
+/* query */
+
+#query {
+  width: 80%;
+  border-radius: 5px;
+  padding: 15px 8px;
+  display: block;
+  margin: 0 auto 30px auto;
+  border: 1px solid #b0b0b0;
+}
+
+/* like */
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c1121f;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* Footer */
+
+footer {
+  background-color: #c1121f;
+  text-align: center;
+  padding: 15px 0 15px 0;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 0;
+  position: absolute;
+}

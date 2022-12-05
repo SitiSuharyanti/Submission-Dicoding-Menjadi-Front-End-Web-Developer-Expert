@@ -1,0 +1,176 @@
+@media screen and (max-width: 280px) {
+  .app-bar .app-bar__brand h1 {
+    font-size: 20px;
+    padding-top: 5px;
+  }
+
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../public/images/heros/hero-image_2-small.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../public/images/heros/hero-image_2-small.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .fitur {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 25px;
+  }
+
+  .center-content h4 {
+    padding: 0 25px;
+  }
+
+  .center-content {
+    padding: 60px 25px;
+  }
+
+  .restaurant {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 25px;
+  }
+
+  .card-head img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .detail-restaurant {
+    padding: 80px 25px;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .detail-restaurant img {
+    height: 100%;
+  }
+
+  .container-review {
+    display: inline;
+  }
+
+  #query {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .app-bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+
+  .app-bar .app-bar__menu {
+    display: none;
+  }
+
+  .app-bar .app-bar__navigation {
+    position: static;
+    width: 100%;
+    padding: 8px 20px;
+  }
+
+  .app-bar .app-bar__navigation ul li {
+    display: inline-block;
+  }
+
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .fitur {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 25px;
+  }
+
+  .center-content {
+    padding: 60px 100px;
+  }
+
+  .center-content h4 {
+    padding: 0 50px;
+  }
+
+  .restaurant {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 25px;
+  }
+
+  .card-head img {
+    width: 100%;
+    height: 30vw;
+  }
+
+  .detail-restaurant {
+    padding: 80px 25px;
+  }
+
+  .detail-restaurant img {
+    height: 100%;
+  }
+
+  #query {
+    width: 93%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .detail-restaurant {
+    padding: 80px 150px;
+  }
+
+  .detail-restaurant img {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .fitur {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 350px;
+  }
+
+  .center-content {
+    padding: 60px 250px;
+  }
+
+  .center-content h4 {
+    padding: 0 100px;
+  }
+
+  .restaurant {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 150px;
+  }
+
+  .card-head img {
+    width: 100%;
+    height: 15vw;
+  }
+
+  .detail-restaurant img {
+    height: 600px;
+  }
+
+  #query {
+    width: 80%;
+  }
+}
